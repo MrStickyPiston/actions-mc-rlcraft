@@ -17,8 +17,8 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t server .
+          docker build --env-file .env -t server .
 
       - name: Run Docker container
         run: |
-          docker run --rm server
+          docker run --env-file .env --rm server

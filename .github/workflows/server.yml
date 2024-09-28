@@ -21,6 +21,6 @@ jobs:
 
       - name: Run Docker container
         run: |
-          echo "GIT_USER=${{ secrets.GIT_USER }}" >> .env
+          echo "PLAYIT_DOCKER_KEY=${{ secrets.PLAYIT_DOCKER_KEY }}" >> .env
           echo "GIT_TOKEN=${{ secrets.GIT_TOKEN }}" >> .env
           docker run --env-file .env --rm server

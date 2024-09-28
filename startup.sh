@@ -24,7 +24,7 @@ echo 'eula=true' > eula.txt
 chmod -R 777 .
 
 # Start the Playit tool in the background
-./playit-linux-amd64 --secret ${PLAYIT_DOCKER_KEY} --platform_docker > logs/playit.log &
+./playit-linux-amd64 --secret ${PLAYIT_DOCKER_KEY} --platform_docker &
 
 # Start Minecraft server in a 'screen' session
 echo "Starting minecraft server..."

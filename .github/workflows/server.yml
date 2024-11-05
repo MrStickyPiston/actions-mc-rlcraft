@@ -17,7 +17,8 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t server .
+          export $(grep -v '^#' .env | xargs)
+          docker build -t server . --build-arg JDK_VERSION=$JDK_VERSION
 
       - name: Run Docker container
         run: |
